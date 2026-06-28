@@ -19,25 +19,32 @@ export class Upload extends Model<Upload, CreateUploadDto> {
     allowNull: false,
   })
   image: string;
+
+
   @ForeignKey(() => Category)
   @Column({
     type: DataType.INTEGER
   })
   category_id: number;
+
   @ForeignKey(() => User)
   @Column({
     type: DataType.INTEGER
   })
   user_id: number;
+
   @ForeignKey(() => Transaction)
   @Column({
     type: DataType.INTEGER
   })
   transaction_id: number;
+
   @BelongsTo(() => Category)
   category: Category
+
   @BelongsTo(() => User)
   user: User
+
   @BelongsTo(() => Transaction)
   Transaction: Transaction
 }
