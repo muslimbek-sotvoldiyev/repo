@@ -5,6 +5,19 @@ import { Wallet } from 'src/wallets/wallet.model';
 import { CreateTransactionDto, TransactionType } from './dto/create-transaction.dto';
 import { Upload } from 'src/uploads/upload.model';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @Table({ tableName: 'transactions', timestamps: true })
 export class Transaction extends Model<Transaction, CreateTransactionDto> {
   @Column({
